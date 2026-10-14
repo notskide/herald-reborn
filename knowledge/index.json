@@ -262,6 +262,22 @@
       ]
     },
     {
+      "id": "document-ocr-and-parsing",
+      "path": "document-ocr-and-parsing.md",
+      "title": "Document OCR and Parsing",
+      "tags": [
+        "ocr",
+        "documents",
+        "information-extraction",
+        "multimodal"
+      ],
+      "related": [
+        "retrieval-augmented-generation",
+        "knowledge-repositories",
+        "multimodal-models"
+      ]
+    },
+    {
       "id": "edge-and-low-resource-inference",
       "path": "edge-and-low-resource-inference.md",
       "title": "Edge and Low-Resource Inference",
@@ -967,6 +983,22 @@
       ]
     },
     {
+      "id": "speech-recognition-and-synthesis",
+      "path": "speech-recognition-and-synthesis.md",
+      "title": "Speech Recognition and Synthesis",
+      "tags": [
+        "speech",
+        "audio",
+        "multimodal",
+        "accessibility"
+      ],
+      "related": [
+        "multimodal-models",
+        "translation-and-multilingual-ai",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
       "id": "summarization-and-compression",
       "path": "summarization-and-compression.md",
       "title": "Summarization and Context Compression",
@@ -999,6 +1031,22 @@
       ]
     },
     {
+      "id": "system-observability-for-ai",
+      "path": "system-observability-for-ai.md",
+      "title": "Observability for AI Systems",
+      "tags": [
+        "observability",
+        "monitoring",
+        "debugging",
+        "operations"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "model-monitoring-and-drift",
+        "latency-throughput-and-cost"
+      ]
+    },
+    {
       "id": "tokenization-and-context-windows",
       "path": "tokenization-and-context-windows.md",
       "title": "Tokenization and Context Windows",
@@ -1013,6 +1061,22 @@
         "prompt-design-and-instruction-hierarchy",
         "retrieval-augmented-generation",
         "model-parameters-and-decoding"
+      ]
+    },
+    {
+      "id": "tool-sandboxing-and-least-privilege",
+      "path": "tool-sandboxing-and-least-privilege.md",
+      "title": "Tool Sandboxing and Least Privilege",
+      "tags": [
+        "security",
+        "tools",
+        "sandboxing",
+        "agents"
+      ],
+      "related": [
+        "agents-and-tool-use",
+        "prompt-injection-and-untrusted-content",
+        "adversarial-robustness-and-testing"
       ]
     },
     {
