@@ -967,6 +967,38 @@
       ]
     },
     {
+      "id": "summarization-and-compression",
+      "path": "summarization-and-compression.md",
+      "title": "Summarization and Context Compression",
+      "tags": [
+        "summarization",
+        "context",
+        "generation",
+        "information"
+      ],
+      "related": [
+        "tokenization-and-context-windows",
+        "retrieval-augmented-generation",
+        "learning-and-memory"
+      ]
+    },
+    {
+      "id": "synthetic-data-and-augmentation",
+      "path": "synthetic-data-and-augmentation.md",
+      "title": "Synthetic Data and Data Augmentation",
+      "tags": [
+        "synthetic-data",
+        "datasets",
+        "training",
+        "evaluation"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "neural-networks"
+      ]
+    },
+    {
       "id": "tokenization-and-context-windows",
       "path": "tokenization-and-context-windows.md",
       "title": "Tokenization and Context Windows",
@@ -1001,6 +1033,22 @@
       ]
     },
     {
+      "id": "translation-and-multilingual-ai",
+      "path": "translation-and-multilingual-ai.md",
+      "title": "Translation and Multilingual AI",
+      "tags": [
+        "multilingual",
+        "translation",
+        "nlp",
+        "accessibility"
+      ],
+      "related": [
+        "encoder-decoder-and-sequence-models",
+        "evaluation-and-test-sets",
+        "bias-fairness-and-representation"
+      ]
+    },
+    {
       "id": "uncertainty-and-conflicting-evidence",
       "path": "uncertainty-and-conflicting-evidence.md",
       "title": "Uncertainty and Conflicting Evidence",
@@ -1031,6 +1079,22 @@
         "embeddings-and-semantic-similarity",
         "retrieval-augmented-generation",
         "knowledge-repositories",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "vision-and-image-understanding",
+      "path": "vision-and-image-understanding.md",
+      "title": "Vision and Image Understanding",
+      "tags": [
+        "computer-vision",
+        "multimodal",
+        "images",
+        "evaluation"
+      ],
+      "related": [
+        "multimodal-models",
+        "ai-systems-and-models",
         "evaluation-and-test-sets"
       ]
     }
