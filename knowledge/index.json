@@ -672,6 +672,38 @@
       ]
     },
     {
+      "id": "output-validation-and-structured-data",
+      "path": "output-validation-and-structured-data.md",
+      "title": "Output Validation and Structured Data",
+      "tags": [
+        "structured-output",
+        "validation",
+        "security",
+        "api"
+      ],
+      "related": [
+        "function-calling-and-tool-protocols",
+        "information-extraction",
+        "model-serving-and-api-design"
+      ]
+    },
+    {
+      "id": "preference-optimization-and-feedback",
+      "path": "preference-optimization-and-feedback.md",
+      "title": "Preference Optimization and Human Feedback",
+      "tags": [
+        "alignment",
+        "training",
+        "feedback",
+        "evaluation"
+      ],
+      "related": [
+        "fine-tuning-versus-retrieval",
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
       "id": "privacy-and-secrets",
       "path": "privacy-and-secrets.md",
       "title": "Privacy and Secrets",
@@ -723,6 +755,22 @@
       ]
     },
     {
+      "id": "prompt-template-design",
+      "path": "prompt-template-design.md",
+      "title": "Prompt Template Design",
+      "tags": [
+        "prompting",
+        "templates",
+        "reliability",
+        "llm"
+      ],
+      "related": [
+        "prompt-design-and-instruction-hierarchy",
+        "tokenization-and-context-windows",
+        "retrieval-augmented-generation"
+      ]
+    },
+    {
       "id": "quantization-and-inference",
       "path": "quantization-and-inference.md",
       "title": "Quantization and Inference",
@@ -737,6 +785,22 @@
         "model-parameters-and-decoding",
         "model-serving-and-api-design",
         "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "query-rewriting-and-expansion",
+      "path": "query-rewriting-and-expansion.md",
+      "title": "Query Rewriting and Expansion",
+      "tags": [
+        "retrieval",
+        "query-processing",
+        "search",
+        "rag"
+      ],
+      "related": [
+        "retrieval-and-search",
+        "keyword-search-and-ranking",
+        "vector-search-and-indexes"
       ]
     },
     {
