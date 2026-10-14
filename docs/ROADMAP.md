@@ -18,13 +18,13 @@ This roadmap is provisional and will change as the project is tested.
 - [x] Establish stable entry IDs, source metadata, and cross-links
 - [ ] Create a small, versioned retrieval evaluation set
 - [ ] Measure ranking and tune from observed failures
-- [ ] Add a reviewed alias/synonym map for common terms and abbreviations
+- [x] Add a small lexical alias/synonym map for common terms and abbreviations
 - [ ] Explore semantic or hybrid retrieval only if it solves a measured problem
 
 ## Phase 3 — Assistant integration
 
 - [x] Define a portable retrieval interface
-- [ ] Build a context builder that selects a bounded set of relevant entries
+- [x] Build a context builder that selects a bounded set of relevant entries
 - [ ] Add a response planner for unsupported, ambiguous, and conflicting-evidence questions
 - [ ] Connect retrieval to a configured model inference backend
 - [ ] Return entry IDs or source URLs with grounded answers
@@ -33,7 +33,7 @@ This roadmap is provisional and will change as the project is tested.
 
 ## Phase 4 — Quality, safety, and resource budgets
 
-- [ ] Add regression tests for empty retrieval, injected instructions in retrieved content, and citation support
+- [x] Add regression tests for empty retrieval, injected instructions in retrieved content, and source metadata
 - [ ] Measure memory, latency, and quality under realistic request load
 - [ ] Add red-team cases and a documented safety review checklist
 - [ ] Review source permissions and provenance before marking content reviewed
