@@ -443,6 +443,22 @@
       ]
     },
     {
+      "id": "instruction-finetuning",
+      "path": "instruction-finetuning.md",
+      "title": "Instruction Fine-Tuning",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "llm",
+        "instruction-following"
+      ],
+      "related": [
+        "fine-tuning-versus-retrieval",
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
       "id": "keyword-search-and-ranking",
       "path": "keyword-search-and-ranking.md",
       "title": "Keyword Search and Ranking",
@@ -457,6 +473,22 @@
         "knowledge-repositories",
         "retrieval-augmented-generation",
         "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "knowledge-graphs-and-ontologies",
+      "path": "knowledge-graphs-and-ontologies.md",
+      "title": "Knowledge Graphs and Ontologies",
+      "tags": [
+        "knowledge-graphs",
+        "ontology",
+        "retrieval",
+        "data-modeling"
+      ],
+      "related": [
+        "knowledge-repositories",
+        "retrieval-augmented-generation",
+        "data-quality-and-provenance"
       ]
     },
     {
@@ -476,6 +508,22 @@
       ]
     },
     {
+      "id": "latency-throughput-and-cost",
+      "path": "latency-throughput-and-cost.md",
+      "title": "Latency, Throughput, and Inference Cost",
+      "tags": [
+        "latency",
+        "throughput",
+        "performance",
+        "serving"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "quantization-and-inference",
+        "retrieval-and-search"
+      ]
+    },
+    {
       "id": "learning-and-memory",
       "path": "learning-and-memory.md",
       "title": "Learning and Memory in AI Systems",
@@ -490,6 +538,22 @@
         "retrieval-and-search",
         "retrieval-augmented-generation",
         "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "model-monitoring-and-drift",
+      "path": "model-monitoring-and-drift.md",
+      "title": "Model Monitoring and Drift",
+      "tags": [
+        "monitoring",
+        "drift",
+        "evaluation",
+        "operations"
+      ],
+      "related": [
+        "evaluation-and-test-sets",
+        "data-quality-and-provenance",
+        "model-serving-and-api-design"
       ]
     },
     {
