@@ -868,6 +868,22 @@
       ]
     },
     {
+      "id": "responsible-ai-risk-management",
+      "path": "responsible-ai-risk-management.md",
+      "title": "Responsible AI Risk Management",
+      "tags": [
+        "responsible-ai",
+        "governance",
+        "risk",
+        "safety"
+      ],
+      "related": [
+        "safety-policy-design",
+        "bias-fairness-and-representation",
+        "privacy-and-secrets"
+      ]
+    },
+    {
       "id": "retrieval-and-search",
       "path": "retrieval-and-search.md",
       "title": "Retrieval and Search",
@@ -900,6 +916,54 @@
         "embeddings-and-semantic-similarity",
         "hallucinations-and-grounding",
         "prompt-injection-and-untrusted-content"
+      ]
+    },
+    {
+      "id": "retrieval-data-filtering",
+      "path": "retrieval-data-filtering.md",
+      "title": "Retrieval Metadata and Access Filtering",
+      "tags": [
+        "retrieval",
+        "metadata",
+        "security",
+        "rag"
+      ],
+      "related": [
+        "retrieval-and-search",
+        "knowledge-repositories",
+        "privacy-and-secrets"
+      ]
+    },
+    {
+      "id": "retrieval-evaluation-benchmarking",
+      "path": "retrieval-evaluation-benchmarking.md",
+      "title": "Retrieval Evaluation and Benchmarking",
+      "tags": [
+        "retrieval",
+        "benchmarks",
+        "evaluation",
+        "testing"
+      ],
+      "related": [
+        "evaluation-metrics-for-retrieval",
+        "evaluation-and-test-sets",
+        "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "safety-policy-design",
+      "path": "safety-policy-design.md",
+      "title": "AI Safety Policy Design",
+      "tags": [
+        "safety",
+        "policy",
+        "governance",
+        "evaluation"
+      ],
+      "related": [
+        "prompt-design-and-instruction-hierarchy",
+        "prompt-injection-and-untrusted-content",
+        "evaluation-and-test-sets"
       ]
     },
     {
