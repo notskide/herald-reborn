@@ -574,6 +574,22 @@
       ]
     },
     {
+      "id": "model-routing-and-fallbacks",
+      "path": "model-routing-and-fallbacks.md",
+      "title": "Model Routing and Fallbacks",
+      "tags": [
+        "model-routing",
+        "reliability",
+        "inference",
+        "architecture"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "latency-throughput-and-cost",
+        "inference-decoding-strategies"
+      ]
+    },
+    {
       "id": "model-serving-and-api-design",
       "path": "model-serving-and-api-design.md",
       "title": "Model Serving and API Design",
@@ -591,6 +607,22 @@
       ]
     },
     {
+      "id": "multimodal-models",
+      "path": "multimodal-models.md",
+      "title": "Multimodal Models",
+      "tags": [
+        "multimodal",
+        "vision",
+        "audio",
+        "architecture"
+      ],
+      "related": [
+        "transformers-and-attention",
+        "evaluation-and-test-sets",
+        "tokenization-and-context-windows"
+      ]
+    },
+    {
       "id": "neural-networks",
       "path": "neural-networks.md",
       "title": "Neural Networks",
@@ -604,6 +636,38 @@
         "ai-systems-and-models",
         "transformers-and-attention",
         "model-parameters-and-decoding",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "normalization-residual-connections",
+      "path": "normalization-residual-connections.md",
+      "title": "Normalization and Residual Connections",
+      "tags": [
+        "transformers",
+        "architecture",
+        "training",
+        "neural-networks"
+      ],
+      "related": [
+        "transformers-and-attention",
+        "neural-networks",
+        "optimization-and-learning-rates"
+      ]
+    },
+    {
+      "id": "optimization-and-learning-rates",
+      "path": "optimization-and-learning-rates.md",
+      "title": "Optimization and Learning Rates",
+      "tags": [
+        "optimization",
+        "training",
+        "gradients",
+        "neural-networks"
+      ],
+      "related": [
+        "neural-networks",
+        "data-splitting-and-leakage",
         "evaluation-and-test-sets"
       ]
     },
