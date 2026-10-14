@@ -19,6 +19,22 @@
       ]
     },
     {
+      "id": "agent-planning-and-task-decomposition",
+      "path": "agent-planning-and-task-decomposition.md",
+      "title": "Agent Planning and Task Decomposition",
+      "tags": [
+        "agents",
+        "planning",
+        "tools",
+        "reliability"
+      ],
+      "related": [
+        "agents-and-tool-use",
+        "code-generation-and-execution",
+        "model-serving-and-api-design"
+      ]
+    },
+    {
       "id": "agents-and-tool-use",
       "path": "agents-and-tool-use.md",
       "title": "AI Agents and Tool Use",
@@ -557,6 +573,22 @@
       ]
     },
     {
+      "id": "memory-design-for-assistants",
+      "path": "memory-design-for-assistants.md",
+      "title": "Memory Design for Assistants",
+      "tags": [
+        "memory",
+        "personalization",
+        "conversation",
+        "privacy"
+      ],
+      "related": [
+        "learning-and-memory",
+        "conversation-state-and-history",
+        "privacy-and-secrets"
+      ]
+    },
+    {
       "id": "model-monitoring-and-drift",
       "path": "model-monitoring-and-drift.md",
       "title": "Model Monitoring and Drift",
@@ -734,6 +766,22 @@
         "model-serving-and-api-design",
         "prompt-injection-and-untrusted-content",
         "agents-and-tool-use"
+      ]
+    },
+    {
+      "id": "privacy-by-design-and-data-retention",
+      "path": "privacy-by-design-and-data-retention.md",
+      "title": "Privacy by Design and Data Retention",
+      "tags": [
+        "privacy",
+        "data-retention",
+        "security",
+        "governance"
+      ],
+      "related": [
+        "privacy-and-secrets",
+        "conversation-state-and-history",
+        "memory-design-for-assistants"
       ]
     },
     {
@@ -980,6 +1028,23 @@
         "prompt-design-and-instruction-hierarchy",
         "prompt-injection-and-untrusted-content",
         "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "source-attribution-and-provenance",
+      "path": "source-attribution-and-provenance.md",
+      "title": "Source Attribution and Provenance",
+      "tags": [
+        "sources",
+        "provenance",
+        "citations",
+        "trust"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "knowledge-repositories",
+        "hallucinations-and-grounding",
+        "retrieval-augmented-generation"
       ]
     },
     {
