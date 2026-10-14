@@ -21,6 +21,8 @@ jobs:
           python-version: "3.12"
       - name: Validate metadata, index, and links
         run: python scripts/validate_knowledge.py
+      - name: Run retrieval regression tests
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
       - name: Smoke-test dictionary search
         run: |
           python scripts/search_knowledge.py --query "retrieval augmented generation" --limit 3
