@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "description": "Index of curated Herald Reborn knowledge entries. Paths are relative to this knowledge directory.",
+  "description": "Search index for Herald Reborn's draft and reviewed knowledge entries. Paths are relative to this directory.",
   "entries": [
+    {
+      "id": "adversarial-robustness-and-testing",
+      "path": "adversarial-robustness-and-testing.md",
+      "title": "Adversarial Robustness and Testing",
+      "tags": [
+        "robustness",
+        "security",
+        "evaluation",
+        "testing"
+      ],
+      "related": [
+        "prompt-injection-and-untrusted-content",
+        "evaluation-and-test-sets",
+        "hallucinations-and-grounding"
+      ]
+    },
     {
       "id": "agents-and-tool-use",
       "path": "agents-and-tool-use.md",
@@ -33,6 +49,118 @@
         "neural-networks",
         "transformers-and-attention",
         "learning-and-memory",
+        "model-serving-and-api-design"
+      ]
+    },
+    {
+      "id": "api-authentication-and-rate-limits",
+      "path": "api-authentication-and-rate-limits.md",
+      "title": "API Authentication and Rate Limits",
+      "tags": [
+        "api",
+        "security",
+        "authentication",
+        "operations"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "privacy-and-secrets",
+        "quantization-and-inference"
+      ]
+    },
+    {
+      "id": "batching-and-response-caching",
+      "path": "batching-and-response-caching.md",
+      "title": "Batching and Response Caching",
+      "tags": [
+        "performance",
+        "caching",
+        "inference",
+        "serving"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "retrieval-and-search",
+        "tokenization-and-context-windows"
+      ]
+    },
+    {
+      "id": "bias-fairness-and-representation",
+      "path": "bias-fairness-and-representation.md",
+      "title": "Bias, Fairness, and Representation",
+      "tags": [
+        "fairness",
+        "bias",
+        "datasets",
+        "responsible-ai"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "privacy-and-secrets"
+      ]
+    },
+    {
+      "id": "calibration-and-confidence",
+      "path": "calibration-and-confidence.md",
+      "title": "Calibration and Confidence",
+      "tags": [
+        "uncertainty",
+        "evaluation",
+        "probability",
+        "reliability"
+      ],
+      "related": [
+        "uncertainty-and-conflicting-evidence",
+        "hallucinations-and-grounding",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "chunking-and-document-ingestion",
+      "path": "chunking-and-document-ingestion.md",
+      "title": "Chunking and Document Ingestion",
+      "tags": [
+        "rag",
+        "chunking",
+        "documents",
+        "retrieval"
+      ],
+      "related": [
+        "retrieval-augmented-generation",
+        "retrieval-and-search",
+        "knowledge-repositories"
+      ]
+    },
+    {
+      "id": "classification-and-labeling-tasks",
+      "path": "classification-and-labeling-tasks.md",
+      "title": "Classification and Labeling Tasks",
+      "tags": [
+        "classification",
+        "machine-learning",
+        "evaluation",
+        "applications"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "uncertainty-and-conflicting-evidence"
+      ]
+    },
+    {
+      "id": "code-generation-and-execution",
+      "path": "code-generation-and-execution.md",
+      "title": "Code Generation and Execution",
+      "tags": [
+        "coding",
+        "tools",
+        "security",
+        "evaluation"
+      ],
+      "related": [
+        "agents-and-tool-use",
+        "prompt-injection-and-untrusted-content",
         "model-serving-and-api-design"
       ]
     },
