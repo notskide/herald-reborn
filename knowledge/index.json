@@ -165,6 +165,54 @@
       ]
     },
     {
+      "id": "conversation-state-and-history",
+      "path": "conversation-state-and-history.md",
+      "title": "Conversation State and History",
+      "tags": [
+        "conversation",
+        "memory",
+        "context",
+        "privacy"
+      ],
+      "related": [
+        "learning-and-memory",
+        "tokenization-and-context-windows",
+        "privacy-and-secrets"
+      ]
+    },
+    {
+      "id": "copyright-data-licensing",
+      "path": "copyright-data-licensing.md",
+      "title": "Copyright, Data Licensing, and AI",
+      "tags": [
+        "copyright",
+        "licensing",
+        "datasets",
+        "governance"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "knowledge-repositories",
+        "privacy-and-secrets"
+      ]
+    },
+    {
+      "id": "data-annotation-and-label-quality",
+      "path": "data-annotation-and-label-quality.md",
+      "title": "Data Annotation and Label Quality",
+      "tags": [
+        "data-quality",
+        "annotation",
+        "datasets",
+        "evaluation"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "ai-systems-and-models"
+      ]
+    },
+    {
       "id": "data-quality-and-provenance",
       "path": "data-quality-and-provenance.md",
       "title": "Data Quality and Provenance",
@@ -179,6 +227,22 @@
         "learning-and-memory",
         "evaluation-and-test-sets",
         "uncertainty-and-conflicting-evidence"
+      ]
+    },
+    {
+      "id": "data-splitting-and-leakage",
+      "path": "data-splitting-and-leakage.md",
+      "title": "Data Splitting and Leakage",
+      "tags": [
+        "training",
+        "evaluation",
+        "datasets",
+        "statistics"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "learning-and-memory"
       ]
     },
     {
