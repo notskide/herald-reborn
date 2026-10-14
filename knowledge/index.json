@@ -246,6 +246,38 @@
       ]
     },
     {
+      "id": "distillation-and-small-models",
+      "path": "distillation-and-small-models.md",
+      "title": "Model Distillation and Small Models",
+      "tags": [
+        "distillation",
+        "small-models",
+        "inference",
+        "training"
+      ],
+      "related": [
+        "fine-tuning-versus-retrieval",
+        "quantization-and-inference",
+        "neural-networks"
+      ]
+    },
+    {
+      "id": "edge-and-low-resource-inference",
+      "path": "edge-and-low-resource-inference.md",
+      "title": "Edge and Low-Resource Inference",
+      "tags": [
+        "edge-ai",
+        "inference",
+        "memory",
+        "quantization"
+      ],
+      "related": [
+        "quantization-and-inference",
+        "model-serving-and-api-design",
+        "model-parameters-and-decoding"
+      ]
+    },
+    {
       "id": "embeddings-and-semantic-similarity",
       "path": "embeddings-and-semantic-similarity.md",
       "title": "Embeddings and Semantic Similarity",
@@ -263,6 +295,22 @@
       ]
     },
     {
+      "id": "encoder-decoder-and-sequence-models",
+      "path": "encoder-decoder-and-sequence-models.md",
+      "title": "Encoder-Decoder and Sequence Models",
+      "tags": [
+        "architecture",
+        "transformers",
+        "sequence-models",
+        "translation"
+      ],
+      "related": [
+        "transformers-and-attention",
+        "tokenization-and-context-windows",
+        "ai-systems-and-models"
+      ]
+    },
+    {
       "id": "evaluation-and-test-sets",
       "path": "evaluation-and-test-sets.md",
       "title": "AI Evaluation and Test Sets",
@@ -277,6 +325,23 @@
         "retrieval-augmented-generation",
         "hallucinations-and-grounding",
         "fine-tuning-versus-retrieval"
+      ]
+    },
+    {
+      "id": "evaluation-metrics-for-retrieval",
+      "path": "evaluation-metrics-for-retrieval.md",
+      "title": "Evaluation Metrics for Retrieval",
+      "tags": [
+        "retrieval",
+        "evaluation",
+        "search",
+        "metrics"
+      ],
+      "related": [
+        "retrieval-and-search",
+        "keyword-search-and-ranking",
+        "retrieval-augmented-generation",
+        "evaluation-and-test-sets"
       ]
     },
     {
