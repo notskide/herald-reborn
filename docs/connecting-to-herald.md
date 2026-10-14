@@ -100,7 +100,7 @@ This uses the built-in fetch API available in modern Node.js.
 Save as herald-example.mjs:
 
 ~~~javascript
-const baseUrl = process.env.HERALD_API_BASE_URL?.replace(/\\/$/, "");
+const baseUrl = process.env.HERALD_API_BASE_URL?.replace(/\/$/, "");
 const apiKey = process.env.HERALD_API_KEY;
 
 if (!baseUrl || !apiKey) {
@@ -149,9 +149,9 @@ node herald-example.mjs
 ## 5. Quick test with curl
 
 ~~~sh
-curl "$HERALD_API_BASE_URL/v1/chat/completions" \\
-  -H "Authorization: Bearer $HERALD_API_KEY" \\
-  -H "Content-Type: application/json" \\
+curl "$HERALD_API_BASE_URL/v1/chat/completions" \
+  -H "Authorization: Bearer $HERALD_API_KEY" \
+  -H "Content-Type: application/json" \
   -d '{
     "model": "herald-core",
     "messages": [{"role": "user", "content": "Hello, Herald!"}],
