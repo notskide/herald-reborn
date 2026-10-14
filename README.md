@@ -38,3 +38,9 @@ Early foundation stage. The repository now includes an initial API gateway proto
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## Use Herald in your project
+
+Developers can follow the [Connect a script to Herald guide](docs/connecting-to-herald.md) for copy-and-paste Python, Node.js, and curl examples. You do not need to host the API yourself; use the public API URL and an API key provided by the project maintainer once the service is deployed.
+
+API operators setting up the server should use the [Wispbyte deployment guide](api/README.md).
