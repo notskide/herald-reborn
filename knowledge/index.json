@@ -589,6 +589,22 @@
       ]
     },
     {
+      "id": "model-card-and-documentation",
+      "path": "model-card-and-documentation.md",
+      "title": "Model Cards and AI System Documentation",
+      "tags": [
+        "documentation",
+        "governance",
+        "model-evaluation",
+        "transparency"
+      ],
+      "related": [
+        "evaluation-and-test-sets",
+        "model-serving-and-api-design",
+        "privacy-and-secrets"
+      ]
+    },
+    {
       "id": "model-monitoring-and-drift",
       "path": "model-monitoring-and-drift.md",
       "title": "Model Monitoring and Drift",
@@ -852,6 +868,22 @@
       ]
     },
     {
+      "id": "query-intent-classification",
+      "path": "query-intent-classification.md",
+      "title": "Query Intent Classification and Routing",
+      "tags": [
+        "intent",
+        "classification",
+        "routing",
+        "retrieval"
+      ],
+      "related": [
+        "classification-and-labeling-tasks",
+        "model-routing-and-fallbacks",
+        "query-rewriting-and-expansion"
+      ]
+    },
+    {
       "id": "query-rewriting-and-expansion",
       "path": "query-rewriting-and-expansion.md",
       "title": "Query Rewriting and Expansion",
@@ -913,6 +945,22 @@
         "neural-networks",
         "data-splitting-and-leakage",
         "optimization-and-learning-rates"
+      ]
+    },
+    {
+      "id": "reproducibility-and-versioning",
+      "path": "reproducibility-and-versioning.md",
+      "title": "Reproducibility and Versioning",
+      "tags": [
+        "reproducibility",
+        "version-control",
+        "evaluation",
+        "governance"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "evaluation-and-test-sets",
+        "source-attribution-and-provenance"
       ]
     },
     {
@@ -1192,6 +1240,22 @@
         "hallucinations-and-grounding",
         "knowledge-repositories",
         "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "uncertainty-sets-and-abstention",
+      "path": "uncertainty-sets-and-abstention.md",
+      "title": "Uncertainty Handling and Abstention",
+      "tags": [
+        "uncertainty",
+        "abstention",
+        "reliability",
+        "rag"
+      ],
+      "related": [
+        "uncertainty-and-conflicting-evidence",
+        "hallucinations-and-grounding",
+        "calibration-and-confidence"
       ]
     },
     {
