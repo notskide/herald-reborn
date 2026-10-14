@@ -23,6 +23,17 @@ Run from the repository root:
     python scripts/search_knowledge.py --query "quantization memory" --limit 5
     python scripts/search_knowledge.py --query "privacy" --tag security
 
+## Build bounded context for a model
+
+The context builder selects the best Dictionary matches, includes entry IDs and source URLs, flags draft-only evidence, and enforces a character budget. It has no model dependency and treats retrieved text as untrusted reference material rather than executable instructions.
+
+Run from the repository root:
+
+    python scripts/context_builder.py --query "How does retrieval-augmented generation work?" --limit 4 --max-chars 6000
+    python -m unittest discover -s scripts -p "test_*.py" -v
+
+The context builder prepares evidence; it does not generate an answer. A real model inference endpoint is still required for chat generation.
+
 ## Connect Herald to your project
 
 Start with [Connect a script to Herald](docs/connecting-to-herald.md). It includes Python, Node.js, and curl examples, request formats, authentication, and troubleshooting.
