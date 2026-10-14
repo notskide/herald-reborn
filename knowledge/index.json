@@ -362,6 +362,22 @@
       ]
     },
     {
+      "id": "function-calling-and-tool-protocols",
+      "path": "function-calling-and-tool-protocols.md",
+      "title": "Function Calling and Tool Protocols",
+      "tags": [
+        "tools",
+        "agents",
+        "api",
+        "structured-output"
+      ],
+      "related": [
+        "agents-and-tool-use",
+        "model-serving-and-api-design",
+        "prompt-injection-and-untrusted-content"
+      ]
+    },
+    {
       "id": "hallucinations-and-grounding",
       "path": "hallucinations-and-grounding.md",
       "title": "Hallucinations and Grounding",
@@ -376,6 +392,54 @@
         "uncertainty-and-conflicting-evidence",
         "evaluation-and-test-sets",
         "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "human-in-the-loop-review",
+      "path": "human-in-the-loop-review.md",
+      "title": "Human-in-the-Loop Review",
+      "tags": [
+        "human-review",
+        "safety",
+        "governance",
+        "evaluation"
+      ],
+      "related": [
+        "evaluation-and-test-sets",
+        "uncertainty-and-conflicting-evidence",
+        "hallucinations-and-grounding"
+      ]
+    },
+    {
+      "id": "inference-decoding-strategies",
+      "path": "inference-decoding-strategies.md",
+      "title": "Inference and Decoding Strategies",
+      "tags": [
+        "inference",
+        "decoding",
+        "generation",
+        "llm"
+      ],
+      "related": [
+        "model-parameters-and-decoding",
+        "tokenization-and-context-windows",
+        "quantization-and-inference"
+      ]
+    },
+    {
+      "id": "information-extraction",
+      "path": "information-extraction.md",
+      "title": "Information Extraction",
+      "tags": [
+        "information-extraction",
+        "structured-data",
+        "nlp",
+        "applications"
+      ],
+      "related": [
+        "knowledge-repositories",
+        "retrieval-augmented-generation",
+        "evaluation-and-test-sets"
       ]
     },
     {
