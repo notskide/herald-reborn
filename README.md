@@ -1,47 +1,51 @@
 # Herald Reborn
 
-Herald Reborn is an evolving AI project with a structured knowledge dictionary and examples for connecting applications to the Herald API.
+Herald Reborn is an evolving AI project built around a structured, source-linked knowledge dictionary and public examples for connecting applications to the Herald API.
 
 ## What this repository contains
 
-- docs: public developer guides and integration examples
-- knowledge: curated dictionary entries and a navigation index
-- schemas: metadata validation schema
-- scripts: dependency-free tools to validate and search the dictionary
+- `knowledge/`: the expanding Dictionary of AI concepts, implementation practices, evaluation, safety, and deployment.
+- `scripts/`: dependency-free tools for validation and keyword-based retrieval.
+- `schemas/`: the metadata schema for knowledge entries.
+- `docs/`: public developer guides and the project roadmap.
+- `.github/workflows/`: automated checks for Dictionary consistency and search smoke tests.
 
 ## Herald's Dictionary
 
-The knowledge directory is Herald's inspectable knowledge dictionary. It currently covers AI foundations, neural networks, transformers, tokenization, embeddings, retrieval, prompting, evaluation, serving, safety, and data quality. Entries are focused Markdown files with stable IDs, tags, relationships, source URLs, review status, and update dates.
+The Dictionary contains **82 indexed topics** spanning AI foundations and model architecture, training and optimization, prompting, retrieval and RAG, inference, serving, agents and tools, multimodal tasks, software integration, evaluation, privacy, safety, and governance. Each entry is a focused Markdown file with a stable ID, summary, tags, related entries, source links, review status, and update date.
 
-The corpus is an expanding foundation, not a complete encyclopedia. New entries start as drafts and should be reviewed before being marked reviewed. Keep the index synchronized and never invent sources.
+This is a growing reference collection, not a complete encyclopedia. New and expanded material starts as `draft` until source relevance and important claims have been deliberately reviewed. An entry does not train a model or prove a claim simply because it exists.
 
 Run from the repository root:
 
     python scripts/validate_knowledge.py
     python scripts/search_knowledge.py --query "How does retrieval-augmented generation work?"
+    python scripts/search_knowledge.py --query "quantization memory" --limit 5
+    python scripts/search_knowledge.py --query "privacy" --tag security
 
 ## Connect Herald to your project
 
-Start with the [Connect a script to Herald guide](docs/connecting-to-herald.md). It includes examples for Python, Node.js, and curl, plus request formats, authentication, and troubleshooting.
+Start with [Connect a script to Herald](docs/connecting-to-herald.md). It includes Python, Node.js, and curl examples, request formats, authentication, and troubleshooting.
 
-A developer needs an API base URL and an API key supplied by the API operator. This repository focuses on the dictionary and client-side examples; it does not prescribe where the API must run.
+A developer needs an API base URL and an API key supplied by the API operator. This repository focuses on the Dictionary and developer integration examples; it does not prescribe where the API must run.
 
 ## Model names
 
-Examples use the public model aliases herald-core and herald-sentinel. The aliases identify model options exposed by an API; they do not mean trained model weights are included in this repository.
+Examples use the public model aliases `herald-core` and `herald-sentinel`. These aliases identify model options exposed by an API; they do not mean trained model weights are included in this repository.
 
 ## Principles
 
-- Structured: use consistent formats and metadata.
-- Connected: link related concepts explicitly.
-- Traceable: record sources and distinguish evidence from inference.
-- Incremental: make small, reviewable improvements.
-- Resource-conscious: keep the knowledge layer portable and usable on modest hardware.
+- **Structured:** use consistent formats and metadata.
+- **Traceable:** record sources and distinguish evidence from inference.
+- **Connected:** link related concepts explicitly.
+- **Incremental:** make small, reviewable improvements.
+- **Resource-conscious:** keep retrieval portable and usable on modest hardware.
+- **Honest:** document limitations and never invent data, sources, model weights, or evaluation results.
 
 ## Status
 
-The knowledge corpus and its tools are in active development. Entries remain drafts until they receive deliberate review.
+The knowledge corpus and its tools are in active development. Entries remain drafts until reviewed. The goal is a useful, searchable, auditable knowledge source that supports Herald's runtime without requiring the entire corpus to be loaded into the model prompt.
 
 ## Contributing
 
-See CONTRIBUTING.md for contribution guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.

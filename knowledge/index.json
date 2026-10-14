@@ -343,6 +343,22 @@
       ]
     },
     {
+      "id": "energy-use-and-compute-budgeting",
+      "path": "energy-use-and-compute-budgeting.md",
+      "title": "Energy Use and Compute Budgeting",
+      "tags": [
+        "efficiency",
+        "compute",
+        "energy",
+        "inference"
+      ],
+      "related": [
+        "edge-and-low-resource-inference",
+        "latency-throughput-and-cost",
+        "quantization-and-inference"
+      ]
+    },
+    {
       "id": "evaluation-and-test-sets",
       "path": "evaluation-and-test-sets.md",
       "title": "AI Evaluation and Test Sets",
@@ -671,6 +687,22 @@
       ]
     },
     {
+      "id": "model-serving-scaling-and-concurrency",
+      "path": "model-serving-scaling-and-concurrency.md",
+      "title": "Model Serving, Scaling, and Concurrency",
+      "tags": [
+        "serving",
+        "concurrency",
+        "scaling",
+        "operations"
+      ],
+      "related": [
+        "model-serving-and-api-design",
+        "latency-throughput-and-cost",
+        "edge-and-low-resource-inference"
+      ]
+    },
+    {
       "id": "multimodal-models",
       "path": "multimodal-models.md",
       "title": "Multimodal Models",
@@ -717,6 +749,22 @@
         "transformers-and-attention",
         "neural-networks",
         "optimization-and-learning-rates"
+      ]
+    },
+    {
+      "id": "open-model-licensing-and-deployment",
+      "path": "open-model-licensing-and-deployment.md",
+      "title": "Open Model Licensing and Deployment",
+      "tags": [
+        "open-models",
+        "licensing",
+        "deployment",
+        "governance"
+      ],
+      "related": [
+        "copyright-data-licensing",
+        "model-card-and-documentation",
+        "quantization-and-inference"
       ]
     },
     {
