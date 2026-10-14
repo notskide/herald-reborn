@@ -804,6 +804,70 @@
       ]
     },
     {
+      "id": "recommendation-and-ranking-systems",
+      "path": "recommendation-and-ranking-systems.md",
+      "title": "Recommendation and Ranking Systems",
+      "tags": [
+        "recommendation",
+        "ranking",
+        "retrieval",
+        "evaluation"
+      ],
+      "related": [
+        "keyword-search-and-ranking",
+        "evaluation-metrics-for-retrieval",
+        "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "red-teaming-ai-systems",
+      "path": "red-teaming-ai-systems.md",
+      "title": "Red Teaming AI Systems",
+      "tags": [
+        "red-teaming",
+        "security",
+        "safety",
+        "testing"
+      ],
+      "related": [
+        "adversarial-robustness-and-testing",
+        "prompt-injection-and-untrusted-content",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "regularization-and-generalization",
+      "path": "regularization-and-generalization.md",
+      "title": "Regularization and Generalization",
+      "tags": [
+        "training",
+        "generalization",
+        "regularization",
+        "neural-networks"
+      ],
+      "related": [
+        "neural-networks",
+        "data-splitting-and-leakage",
+        "optimization-and-learning-rates"
+      ]
+    },
+    {
+      "id": "reranking-and-hybrid-search",
+      "path": "reranking-and-hybrid-search.md",
+      "title": "Reranking and Hybrid Search",
+      "tags": [
+        "retrieval",
+        "search",
+        "ranking",
+        "rag"
+      ],
+      "related": [
+        "keyword-search-and-ranking",
+        "embeddings-and-semantic-similarity",
+        "vector-search-and-indexes"
+      ]
+    },
+    {
       "id": "retrieval-and-search",
       "path": "retrieval-and-search.md",
       "title": "Retrieval and Search",
