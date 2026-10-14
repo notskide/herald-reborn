@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "description": "Index of curated Herald Reborn knowledge entries.",
+  "entries": [
+    {
+      "id": "learning-and-memory",
+      "path": "learning-and-memory.md",
+      "title": "Learning and Memory in AI Systems",
+      "tags": ["ai", "learning", "memory"],
+      "related": ["knowledge-repositories", "retrieval-and-search"]
+    },
+    {
+      "id": "knowledge-repositories",
+      "path": "knowledge-repositories.md",
+      "title": "Knowledge Repositories",
+      "tags": ["knowledge", "data-modeling", "foundations"],
+      "related": ["learning-and-memory", "retrieval-and-search"]
+    },
+    {
+      "id": "retrieval-and-search",
+      "path": "retrieval-and-search.md",
+      "title": "Retrieval and Search",
+      "tags": ["retrieval", "search", "information-access"],
+      "related": ["learning-and-memory", "knowledge-repositories"]
+    }
+  ]
+}
