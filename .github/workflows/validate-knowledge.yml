@@ -21,3 +21,7 @@ jobs:
           python-version: "3.12"
       - name: Validate metadata, index, and links
         run: python scripts/validate_knowledge.py
+      - name: Smoke-test dictionary search
+        run: |
+          python scripts/search_knowledge.py --query "retrieval augmented generation" --limit 3
+          python scripts/search_knowledge.py --query "privacy" --tag security --limit 3
