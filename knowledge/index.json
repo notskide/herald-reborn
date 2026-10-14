@@ -1,27 +1,397 @@
 {
   "version": 1,
-  "description": "Index of curated Herald Reborn knowledge entries.",
+  "description": "Index of curated Herald Reborn knowledge entries. Paths are relative to this knowledge directory.",
   "entries": [
     {
-      "id": "learning-and-memory",
-      "path": "learning-and-memory.md",
-      "title": "Learning and Memory in AI Systems",
-      "tags": ["ai", "learning", "memory"],
-      "related": ["knowledge-repositories", "retrieval-and-search"]
+      "id": "agents-and-tool-use",
+      "path": "agents-and-tool-use.md",
+      "title": "AI Agents and Tool Use",
+      "tags": [
+        "agents",
+        "tools",
+        "automation",
+        "security"
+      ],
+      "related": [
+        "prompt-design-and-instruction-hierarchy",
+        "model-serving-and-api-design",
+        "prompt-injection-and-untrusted-content",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "ai-systems-and-models",
+      "path": "ai-systems-and-models.md",
+      "title": "AI Systems and Models",
+      "tags": [
+        "ai",
+        "models",
+        "machine-learning",
+        "foundations"
+      ],
+      "related": [
+        "neural-networks",
+        "transformers-and-attention",
+        "learning-and-memory",
+        "model-serving-and-api-design"
+      ]
+    },
+    {
+      "id": "data-quality-and-provenance",
+      "path": "data-quality-and-provenance.md",
+      "title": "Data Quality and Provenance",
+      "tags": [
+        "data",
+        "quality",
+        "provenance",
+        "evaluation"
+      ],
+      "related": [
+        "knowledge-repositories",
+        "learning-and-memory",
+        "evaluation-and-test-sets",
+        "uncertainty-and-conflicting-evidence"
+      ]
+    },
+    {
+      "id": "embeddings-and-semantic-similarity",
+      "path": "embeddings-and-semantic-similarity.md",
+      "title": "Embeddings and Semantic Similarity",
+      "tags": [
+        "embeddings",
+        "semantic-search",
+        "vectors",
+        "retrieval"
+      ],
+      "related": [
+        "retrieval-and-search",
+        "retrieval-augmented-generation",
+        "vector-search-and-indexes",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "evaluation-and-test-sets",
+      "path": "evaluation-and-test-sets.md",
+      "title": "AI Evaluation and Test Sets",
+      "tags": [
+        "evaluation",
+        "testing",
+        "metrics",
+        "quality"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "retrieval-augmented-generation",
+        "hallucinations-and-grounding",
+        "fine-tuning-versus-retrieval"
+      ]
+    },
+    {
+      "id": "fine-tuning-versus-retrieval",
+      "path": "fine-tuning-versus-retrieval.md",
+      "title": "Fine-Tuning Versus Retrieval",
+      "tags": [
+        "fine-tuning",
+        "rag",
+        "training",
+        "knowledge"
+      ],
+      "related": [
+        "learning-and-memory",
+        "retrieval-augmented-generation",
+        "ai-systems-and-models",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "hallucinations-and-grounding",
+      "path": "hallucinations-and-grounding.md",
+      "title": "Hallucinations and Grounding",
+      "tags": [
+        "hallucinations",
+        "grounding",
+        "reliability",
+        "rag"
+      ],
+      "related": [
+        "retrieval-augmented-generation",
+        "uncertainty-and-conflicting-evidence",
+        "evaluation-and-test-sets",
+        "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "keyword-search-and-ranking",
+      "path": "keyword-search-and-ranking.md",
+      "title": "Keyword Search and Ranking",
+      "tags": [
+        "search",
+        "keywords",
+        "bm25",
+        "retrieval"
+      ],
+      "related": [
+        "retrieval-and-search",
+        "knowledge-repositories",
+        "retrieval-augmented-generation",
+        "evaluation-and-test-sets"
+      ]
     },
     {
       "id": "knowledge-repositories",
       "path": "knowledge-repositories.md",
       "title": "Knowledge Repositories",
-      "tags": ["knowledge", "data-modeling", "foundations"],
-      "related": ["learning-and-memory", "retrieval-and-search"]
+      "tags": [
+        "knowledge",
+        "data-modeling",
+        "foundations"
+      ],
+      "related": [
+        "learning-and-memory",
+        "retrieval-and-search",
+        "data-quality-and-provenance",
+        "vector-search-and-indexes"
+      ]
+    },
+    {
+      "id": "learning-and-memory",
+      "path": "learning-and-memory.md",
+      "title": "Learning and Memory in AI Systems",
+      "tags": [
+        "ai",
+        "learning",
+        "memory"
+      ],
+      "related": [
+        "ai-systems-and-models",
+        "knowledge-repositories",
+        "retrieval-and-search",
+        "retrieval-augmented-generation",
+        "data-quality-and-provenance"
+      ]
+    },
+    {
+      "id": "model-parameters-and-decoding",
+      "path": "model-parameters-and-decoding.md",
+      "title": "Model Parameters and Decoding",
+      "tags": [
+        "parameters",
+        "decoding",
+        "inference",
+        "generation"
+      ],
+      "related": [
+        "neural-networks",
+        "transformers-and-attention",
+        "tokenization-and-context-windows",
+        "quantization-and-inference"
+      ]
+    },
+    {
+      "id": "model-serving-and-api-design",
+      "path": "model-serving-and-api-design.md",
+      "title": "Model Serving and API Design",
+      "tags": [
+        "api",
+        "serving",
+        "deployment",
+        "security"
+      ],
+      "related": [
+        "ai-systems-and-models",
+        "privacy-and-secrets",
+        "evaluation-and-test-sets",
+        "quantization-and-inference"
+      ]
+    },
+    {
+      "id": "neural-networks",
+      "path": "neural-networks.md",
+      "title": "Neural Networks",
+      "tags": [
+        "ai",
+        "neural-networks",
+        "training",
+        "machine-learning"
+      ],
+      "related": [
+        "ai-systems-and-models",
+        "transformers-and-attention",
+        "model-parameters-and-decoding",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "privacy-and-secrets",
+      "path": "privacy-and-secrets.md",
+      "title": "Privacy and Secrets",
+      "tags": [
+        "privacy",
+        "security",
+        "api-keys",
+        "data-handling"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "model-serving-and-api-design",
+        "prompt-injection-and-untrusted-content",
+        "agents-and-tool-use"
+      ]
+    },
+    {
+      "id": "prompt-design-and-instruction-hierarchy",
+      "path": "prompt-design-and-instruction-hierarchy.md",
+      "title": "Prompt Design and Instruction Hierarchy",
+      "tags": [
+        "prompting",
+        "instructions",
+        "llms",
+        "context"
+      ],
+      "related": [
+        "tokenization-and-context-windows",
+        "retrieval-augmented-generation",
+        "agents-and-tool-use",
+        "prompt-injection-and-untrusted-content"
+      ]
+    },
+    {
+      "id": "prompt-injection-and-untrusted-content",
+      "path": "prompt-injection-and-untrusted-content.md",
+      "title": "Prompt Injection and Untrusted Content",
+      "tags": [
+        "prompt-injection",
+        "security",
+        "rag",
+        "untrusted-data"
+      ],
+      "related": [
+        "prompt-design-and-instruction-hierarchy",
+        "retrieval-augmented-generation",
+        "agents-and-tool-use",
+        "privacy-and-secrets"
+      ]
+    },
+    {
+      "id": "quantization-and-inference",
+      "path": "quantization-and-inference.md",
+      "title": "Quantization and Inference",
+      "tags": [
+        "quantization",
+        "inference",
+        "performance",
+        "models"
+      ],
+      "related": [
+        "ai-systems-and-models",
+        "model-parameters-and-decoding",
+        "model-serving-and-api-design",
+        "evaluation-and-test-sets"
+      ]
     },
     {
       "id": "retrieval-and-search",
       "path": "retrieval-and-search.md",
       "title": "Retrieval and Search",
-      "tags": ["retrieval", "search", "information-access"],
-      "related": ["learning-and-memory", "knowledge-repositories"]
+      "tags": [
+        "retrieval",
+        "search",
+        "information-access"
+      ],
+      "related": [
+        "learning-and-memory",
+        "knowledge-repositories",
+        "keyword-search-and-ranking",
+        "embeddings-and-semantic-similarity",
+        "retrieval-augmented-generation"
+      ]
+    },
+    {
+      "id": "retrieval-augmented-generation",
+      "path": "retrieval-augmented-generation.md",
+      "title": "Retrieval-Augmented Generation",
+      "tags": [
+        "rag",
+        "retrieval",
+        "grounding",
+        "knowledge"
+      ],
+      "related": [
+        "knowledge-repositories",
+        "retrieval-and-search",
+        "embeddings-and-semantic-similarity",
+        "hallucinations-and-grounding",
+        "prompt-injection-and-untrusted-content"
+      ]
+    },
+    {
+      "id": "tokenization-and-context-windows",
+      "path": "tokenization-and-context-windows.md",
+      "title": "Tokenization and Context Windows",
+      "tags": [
+        "tokens",
+        "context-window",
+        "language-models",
+        "prompting"
+      ],
+      "related": [
+        "transformers-and-attention",
+        "prompt-design-and-instruction-hierarchy",
+        "retrieval-augmented-generation",
+        "model-parameters-and-decoding"
+      ]
+    },
+    {
+      "id": "transformers-and-attention",
+      "path": "transformers-and-attention.md",
+      "title": "Transformers and Attention",
+      "tags": [
+        "transformers",
+        "attention",
+        "language-models",
+        "architecture"
+      ],
+      "related": [
+        "neural-networks",
+        "tokenization-and-context-windows",
+        "embeddings-and-semantic-similarity",
+        "model-parameters-and-decoding"
+      ]
+    },
+    {
+      "id": "uncertainty-and-conflicting-evidence",
+      "path": "uncertainty-and-conflicting-evidence.md",
+      "title": "Uncertainty and Conflicting Evidence",
+      "tags": [
+        "uncertainty",
+        "sources",
+        "facts",
+        "reliability"
+      ],
+      "related": [
+        "data-quality-and-provenance",
+        "hallucinations-and-grounding",
+        "knowledge-repositories",
+        "evaluation-and-test-sets"
+      ]
+    },
+    {
+      "id": "vector-search-and-indexes",
+      "path": "vector-search-and-indexes.md",
+      "title": "Vector Search and Indexes",
+      "tags": [
+        "vector-search",
+        "embeddings",
+        "indexes",
+        "retrieval"
+      ],
+      "related": [
+        "embeddings-and-semantic-similarity",
+        "retrieval-augmented-generation",
+        "knowledge-repositories",
+        "evaluation-and-test-sets"
+      ]
     }
   ]
 }

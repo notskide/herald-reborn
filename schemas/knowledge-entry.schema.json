@@ -2,18 +2,66 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/notskide/herald-reborn/blob/main/schemas/knowledge-entry.schema.json",
   "title": "Herald Reborn Knowledge Entry Metadata",
-  "description": "Schema for the metadata fields used by Herald Reborn knowledge entries.",
+  "description": "Schema for metadata fields used by Herald Reborn knowledge entries.",
   "type": "object",
-  "required": ["id", "title", "summary", "tags", "related", "sources", "status", "updated"],
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "tags",
+    "related",
+    "sources",
+    "status",
+    "updated"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
-    "title": {"type": "string", "minLength": 1},
-    "summary": {"type": "string", "minLength": 1},
-    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "related": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}, "uniqueItems": true},
-    "sources": {"type": "array", "items": {"type": "string", "format": "uri"}},
-    "status": {"enum": ["draft", "reviewed", "needs-update"]},
-    "updated": {"type": "string", "format": "date"}
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "needs-update"
+      ]
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    }
   },
   "additionalProperties": false
 }
