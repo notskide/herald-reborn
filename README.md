@@ -1,14 +1,14 @@
 # Herald Reborn
 
-**Herald is an independently developed AI assistant project built around Herald Core, a custom fine-tuned Qwen 2.5 1.5B model, and a source-linked knowledge system.**
+**Herald is an independently developed AI assistant project built around Herald Core, its own language model, and a source-linked knowledge system.**
 
 The goal is to develop an independently operated assistant with its own model, retrieval layer, tools, and eventually a reliable public inference API.
 
-> **Development status:** Herald Core's 1.5B checkpoint has been tested through the project's local inference workflow. This repository currently publishes the knowledge corpus, retrieval/context-building utilities, schemas, and developer documentation. The model checkpoint, full training artifacts, and a continuously hosted public inference service are not included here.
+> **Development status:** Herald Core's current model checkpoint has been tested through the project's local inference workflow. This repository currently publishes the knowledge corpus, retrieval/context-building utilities, schemas, and developer documentation. The model checkpoint, full training artifacts, and a continuously hosted public inference service are not included here.
 
 ## Project components
 
-- **Herald Core:** the language-model component. The current 1.5B checkpoint is based on Qwen 2.5 1.5B Instruct and has been tested locally. Model weights are not stored in this repository.
+- **Herald Core:** Herald's own language-model component. Its current checkpoint has been tested locally. Model weights are not stored in this repository.
 - **Herald's Dictionary:** a structured, source-linked knowledge collection covering AI concepts, model architecture, training, prompting, retrieval, inference, agents, tools, evaluation, privacy, safety, and governance.
 - **Retrieval tools:** lightweight search and bounded context-building utilities that select relevant knowledge entries for a model.
 - **Developer integration:** documentation and examples describing the planned OpenAI-compatible Herald API interface.
@@ -51,7 +51,7 @@ This prepares evidence for a model; it does not generate an answer by itself. A 
 
 ## Model and inference status
 
-The current Herald Core model is based on **Qwen 2.5 1.5B Instruct**. Its checkpoint has been tested through the local Herald inference workflow.
+Herald Core's current model checkpoint has been tested through the local Herald inference workflow. Its underlying model details are intentionally not published here.
 
 A few important distinctions:
 
