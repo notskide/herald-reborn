@@ -1,61 +1,81 @@
 # Herald Reborn
 
-Herald Reborn is an evolving AI project built around a structured, source-linked knowledge dictionary and public examples for connecting applications to the Herald API.
+**Herald is an independently developed AI assistant project built around Herald Core, a custom fine-tuned Qwen 2.5 1.5B model, and a source-linked knowledge system.**
 
-## What this repository contains
+The goal is to develop an independently operated assistant with its own model, retrieval layer, tools, and eventually a reliable public inference API.
 
-- `knowledge/`: the expanding Dictionary of AI concepts, implementation practices, evaluation, safety, and deployment.
-- `scripts/`: dependency-free tools for validation and keyword-based retrieval.
-- `schemas/`: the metadata schema for knowledge entries.
-- `docs/`: public developer guides and the project roadmap.
-- `.github/workflows/`: automated checks for Dictionary consistency and search smoke tests.
+> **Development status:** Herald Core's 1.5B checkpoint has been tested through the project's local inference workflow. This repository currently publishes the knowledge corpus, retrieval/context-building utilities, schemas, and developer documentation. The model checkpoint, full training artifacts, and a continuously hosted public inference service are not included here.
+
+## Project components
+
+- **Herald Core:** the language-model component. The current 1.5B checkpoint is based on Qwen 2.5 1.5B Instruct and has been tested locally. Model weights are not stored in this repository.
+- **Herald's Dictionary:** a structured, source-linked knowledge collection covering AI concepts, model architecture, training, prompting, retrieval, inference, agents, tools, evaluation, privacy, safety, and governance.
+- **Retrieval tools:** lightweight search and bounded context-building utilities that select relevant knowledge entries for a model.
+- **Developer integration:** documentation and examples describing the planned OpenAI-compatible Herald API interface.
+
+## Repository contents
+
+- `knowledge/`: the growing Dictionary of AI concepts and implementation practices.
+- `scripts/`: dependency-free validation, keyword search, and context-building tools.
+- `schemas/`: metadata schema for knowledge entries.
+- `docs/`: developer integration guide and project roadmap.
+- `.github/workflows/`: automated checks for Dictionary consistency and search behavior.
 
 ## Herald's Dictionary
 
-The Dictionary contains **82 indexed topics** spanning AI foundations and model architecture, training and optimization, prompting, retrieval and RAG, inference, serving, agents and tools, multimodal tasks, software integration, evaluation, privacy, safety, and governance. Each entry is a focused Markdown file with a stable ID, summary, tags, related entries, source links, review status, and update date.
+The Dictionary currently contains **82 indexed topics**. Each entry is a focused Markdown document with a stable ID, summary, tags, related entries, source links, review status, and update date.
 
-This is a growing reference collection, not a complete encyclopedia. New and expanded material starts as `draft` until source relevance and important claims have been deliberately reviewed. An entry does not train a model or prove a claim simply because it exists.
+The corpus is a growing reference collection, not a complete encyclopedia. New and expanded material starts as `draft` until its sources and important claims have been deliberately reviewed. Retrieved text is reference material, not executable instructions, and an entry does not train the model simply because it exists.
 
-Run from the repository root:
+## Use the knowledge tools
 
-    python scripts/validate_knowledge.py
-    python scripts/search_knowledge.py --query "How does retrieval-augmented generation work?"
-    python scripts/search_knowledge.py --query "quantization memory" --limit 5
-    python scripts/search_knowledge.py --query "privacy" --tag security
+Run these commands from the repository root:
 
-## Build bounded context for a model
+```bash
+python scripts/validate_knowledge.py
+python scripts/search_knowledge.py --query "How does retrieval-augmented generation work?"
+python scripts/search_knowledge.py --query "quantization memory" --limit 5
+python scripts/search_knowledge.py --query "privacy" --tag security
+```
 
-The context builder selects the best Dictionary matches, includes entry IDs and source URLs, flags draft-only evidence, and enforces a character budget. It has no model dependency and treats retrieved text as untrusted reference material rather than executable instructions.
+### Build bounded context for a model
 
-Run from the repository root:
+The context builder selects relevant Dictionary entries, includes their IDs and source URLs, flags draft-only evidence, and enforces a character budget.
 
-    python scripts/context_builder.py --query "How does retrieval-augmented generation work?" --limit 4 --max-chars 6000
-    python -m unittest discover -s scripts -p "test_*.py" -v
+```bash
+python scripts/context_builder.py --query "How does retrieval-augmented generation work?" --limit 4 --max-chars 6000
+python -m unittest discover -s scripts -p "test_*.py" -v
+```
 
-The context builder prepares evidence; it does not generate an answer. A real model inference endpoint is still required for chat generation.
+This prepares evidence for a model; it does not generate an answer by itself. A model inference runtime is still required for chat generation.
 
-## Connect Herald to your project
+## Model and inference status
 
-Start with [Connect a script to Herald](docs/connecting-to-herald.md). It includes Python, Node.js, and curl examples, request formats, authentication, and troubleshooting.
+The current Herald Core model is based on **Qwen 2.5 1.5B Instruct**. Its checkpoint has been tested through the local Herald inference workflow.
 
-A developer needs an API base URL and an API key supplied by the API operator. This repository focuses on the Dictionary and developer integration examples; it does not prescribe where the API must run.
+A few important distinctions:
 
-## Model names
+- The checkpoint is not committed to this repository.
+- The Dictionary and context builder support the broader assistant project; they are not the language model itself.
+- The public API examples document an integration target. They do not mean a public Herald endpoint is currently deployed.
+- The model aliases `herald-core` and `herald-sentinel` are API-facing names used in examples, not proof that two separate hosted models are available.
 
-Examples use the public model aliases `herald-core` and `herald-sentinel`. These aliases identify model options exposed by an API; they do not mean trained model weights are included in this repository.
+See [the project roadmap](docs/ROADMAP.md) for planned work and [the API integration guide](docs/connecting-to-herald.md) for the current prototype interface.
 
-## Principles
+## Project principles
 
-- **Structured:** use consistent formats and metadata.
-- **Traceable:** record sources and distinguish evidence from inference.
-- **Connected:** link related concepts explicitly.
-- **Incremental:** make small, reviewable improvements.
-- **Resource-conscious:** keep retrieval portable and usable on modest hardware.
-- **Honest:** document limitations and never invent data, sources, model weights, or evaluation results.
+- **Independent:** build and operate Herald as its own AI project.
+- **Traceable:** keep knowledge entries connected to sources and distinguish evidence from inference.
+- **Grounded:** retrieve relevant context and preserve source metadata.
+- **Incremental:** make small, testable improvements.
+- **Resource-conscious:** keep retrieval portable and mindful of limited compute.
+- **Honest:** document what works, what is experimental, and what is not deployed. Never invent model weights, sources, benchmarks, or capabilities.
 
-## Status
+## Current focus
 
-The knowledge corpus and its tools are in active development. Entries remain drafts until reviewed. The goal is a useful, searchable, auditable knowledge source that supports Herald's runtime without requiring the entire corpus to be loaded into the model prompt.
+Herald is under active development. Current work centers on improving the model and its inference workflow, strengthening the knowledge/retrieval layer, and finding sustainable compute for persistent hosting.
+
+The long-term goal is a continuously available Herald service with a reliable API, while keeping the model, knowledge system, and deployment status clearly documented.
 
 ## Contributing
 
