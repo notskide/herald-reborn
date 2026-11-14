@@ -1,37 +1,37 @@
-# Connect a script to Herald Reborn
+# connect to Herald
 
-This guide is for **developers using Herald from their own projects**. You do not need to host the Herald API yourself.
+so you want to use Herald in your own project? this is the guide.
 
-Herald's API is a hosted HTTP service. Your script sends a request to the API, the API routes it to a configured model backend, and your script receives the model's response.
+the Herald API is ready at:
 
-> **Prototype status:** replace HERALD_API_BASE_URL with the real public HTTPS URL once the Herald API operator has deployed it. The API currently needs a configured upstream model backend before chat requests can generate answers. herald-core and herald-sentinel are public model aliases; they do not imply that Herald-trained model weights are already hosted.
+**https://herald.wisp.uno**
 
-## 1. What you'll need
+the API interface and routes are ready to be used. the AI model itself hasn't been implemented into the API yet, so chat requests won't generate actual Herald responses for now. that part is still being worked on.
 
-- A public Herald API base URL from the project maintainer, for example https://your-herald-api.example (placeholder only).
-- A Herald API key provided to you by the maintainer.
-- Python 3.10+ or a recent Node.js release, depending on the example you choose.
+## 1. what you'll need
 
-Do not use the API operator's private server credentials or upstream provider key. Client projects should only receive their own Herald API key.
+- the Herald API URL: `https://herald.wisp.uno`
+- a Herald API key, if authentication is enabled for your access
+- Python 3.10+ or a recent Node.js release, depending on the example you choose
 
-## 2. Set environment variables
+don't put private server credentials or upstream provider keys in your project. keep your own API key private too.
 
-Set these in your local shell, your hosting provider's secret/environment settings, or your deployment's secret manager. Do not commit real keys to GitHub.
+## 2. set the API URL
 
-Example shell session (replace the placeholder values):
+you can use the public URL directly:
 
 ~~~sh
-export HERALD_API_BASE_URL="https://YOUR_PUBLIC_HERALD_API_HOST"
+export HERALD_API_BASE_URL="https://herald.wisp.uno"
 export HERALD_API_KEY="YOUR_HERALD_API_KEY"
 ~~~
 
-Use the exact public HTTPS base URL shared by the maintainer. Do not add a trailing slash.
+don't add a trailing slash to the base URL. keep your API key in an environment variable and never commit a real key to GitHub.
 
 ## 3. Python example
 
-No third-party package is needed; this uses Python's standard library.
+this uses Python's standard library, so no extra packages are needed.
 
-Save as herald_example.py:
+save as `herald_example.py`:
 
 ~~~python
 import json
@@ -39,14 +39,11 @@ import os
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-BASE_URL = os.environ["HERALD_API_BASE_URL"].rstrip("/")
+BASE_URL = os.environ.get("HERALD_API_BASE_URL", "https://herald.wisp.uno").rstrip("/")
 API_KEY = os.environ["HERALD_API_KEY"]
 
 
 def ask_herald(message: str, model: str = "herald-core") -> str:
-    if model not in {"herald-core", "herald-sentinel"}:
-        raise ValueError("model must be 'herald-core' or 'herald-sentinel'")
-
     payload = {
         "model": model,
         "messages": [{"role": "user", "content": message}],
@@ -81,37 +78,29 @@ if __name__ == "__main__":
     print(ask_herald("Hello, Herald!"))
 ~~~
 
-Run it:
+run it with:
 
 ~~~sh
 python herald_example.py
 ~~~
 
-To use the more capable model alias, change the call to:
-
-~~~python
-ask_herald("Help me reason through this problem.", model="herald-sentinel")
-~~~
+**heads up:** the API is ready, but the AI model hasn't been connected yet. this example shows how your project will send a request once model integration is finished. it isn't expected to return an AI generated answer yet.
 
 ## 4. JavaScript / Node.js example
 
-This uses the built-in fetch API available in modern Node.js.
+this uses the built in `fetch` API available in modern Node.js.
 
-Save as herald-example.mjs:
+save as `herald-example.mjs`:
 
 ~~~javascript
-const baseUrl = process.env.HERALD_API_BASE_URL?.replace(/\/$/, "");
+const baseUrl = (process.env.HERALD_API_BASE_URL || "https://herald.wisp.uno").replace(/\\/$/, "");
 const apiKey = process.env.HERALD_API_KEY;
 
-if (!baseUrl || !apiKey) {
-  throw new Error("Set HERALD_API_BASE_URL and HERALD_API_KEY first.");
+if (!apiKey) {
+  throw new Error("Set HERALD_API_KEY first.");
 }
 
 async function askHerald(message, model = "herald-core") {
-  if (!["herald-core", "herald-sentinel"].includes(model)) {
-    throw new Error("model must be 'herald-core' or 'herald-sentinel'");
-  }
-
   const response = await fetch(baseUrl + "/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -140,16 +129,18 @@ async function askHerald(message, model = "herald-core") {
 console.log(await askHerald("Hello from Node.js!"));
 ~~~
 
-Run it:
+run it with:
 
 ~~~sh
 node herald-example.mjs
 ~~~
 
-## 5. Quick test with curl
+the example is ready for when the model is connected. until then, chat requests won't produce a generated response.
+
+## 5. quick test with curl
 
 ~~~sh
-curl "$HERALD_API_BASE_URL/v1/chat/completions" \
+curl "https://herald.wisp.uno/v1/chat/completions" \
   -H "Authorization: Bearer $HERALD_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -159,32 +150,33 @@ curl "$HERALD_API_BASE_URL/v1/chat/completions" \
   }'
 ~~~
 
-A successful OpenAI-compatible response normally contains choices[0].message.content.
+the API uses an OpenAI compatible chat request format. actual chat responses depend on the AI model being connected.
 
-## 6. Available endpoints
+## 6. available endpoints
 
 | Method | Endpoint | Purpose |
 |---|---|---|
-| GET | /health | Public service health/configuration check |
-| GET | /v1/models | List model aliases configured by the operator (API key required) |
-| POST | /v1/chat/completions | Send a chat request (API key required) |
+| GET | /health | Check the API service |
+| GET | /v1/models | List model aliases exposed by the API |
+| POST | /v1/chat/completions | Send a chat request |
 
-## 7. Common errors
+the routes are part of the API interface. model backed chat generation is not available until the AI model is implemented and connected.
 
-- **401 — Authentication error:** check that the API key is correct and sent as Authorization: Bearer YOUR_KEY.
-- **503 — Model not configured:** the API operator must configure the upstream URL and model mapping before this alias can answer.
-- **502 — Upstream error:** the API could not get a valid response from the configured model provider; contact the operator.
-- **404 / connection failure:** verify the base URL and that the API is deployed and reachable.
+## 7. common errors
 
-## Security tips
+- **401: authentication error.** check that your API key is correct and sent as `Authorization: Bearer YOUR_KEY`.
+- **503: model not configured.** the API is reachable, but the AI model hasn't been connected yet.
+- **502: upstream error.** the API couldn't get a valid response from its configured backend.
+- **404 or connection failure.** check the URL and whether the service is reachable.
 
-- Never publish your API key in source code, screenshots, public issues, or a public GitHub repository.
-- Store keys in environment variables or your platform's secret manager.
-- If your project is a public website or a client-side app, **do not embed a private key in browser/mobile code**. Put API calls behind your own server, where your key stays secret.
-- Ask the project maintainer for your own key. Do not share one private test key across the public.
-- The initial API version does not support streaming responses.
-- The API maintainer may set quotas or revoke access; treat keys as credentials.
+## security tips
 
-## About herald-link
+- never publish your API key in source code, screenshots, public issues, or a public GitHub repository.
+- store keys in environment variables or your platform's secret manager.
+- if your project is a public website or a client side app, don't put a private key in browser or mobile code. put API calls behind your own server.
+- don't share private test keys publicly.
+- the initial API version does not support streaming responses.
 
-These examples call the HTTP API directly so developers can integrate immediately without waiting for a client library. A dedicated herald-link SDK can later wrap the same API with a simpler interface, retries, and clearer error handling.
+## about herald-link
+
+these examples call the HTTP API directly, so developers can start integrating without waiting for a client library. a dedicated `herald-link` SDK could wrap the same API later with a simpler interface, retries, and clearer errors.
