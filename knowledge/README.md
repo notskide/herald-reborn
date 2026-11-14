@@ -2,13 +2,15 @@
 
 this folder is basically Herald's reference shelf.
 
-it currently has **82 indexed topics** about AI basics, model training, retrieval and RAG, inference, agents, multimodal systems, evaluation, security, and responsible deployment.
+there are **82 indexed topics** here right now. they cover AI basics, model training, retrieval and RAG, inference, agents, multimodal systems, evaluation, security, and responsible deployment.
 
-quick note: a big folder of knowledge files is not a trained AI model. these entries give the retrieval system information it can find and pass along to a model. the model is still what generates the actual response. entries marked `draft` still need their sources and important claims checked.
+quick note: a folder full of knowledge files isn't a trained AI model. these entries give the retrieval system information it can find and pass to a model. the model is still what generates the actual response.
+
+entries marked `draft` still need their sources and important claims checked.
 
 ## what does an entry look like?
 
-each topic is a Markdown file with a little metadata block at the top. here's the general shape:
+each topic is a Markdown file with a small metadata block at the top. here's the general format:
 
     ---
     id: example-topic
@@ -21,13 +23,13 @@ each topic is a Markdown file with a little metadata block at the top. here's th
     updated: 2026-10-14
     ---
 
-the ID should be lowercase, use hyphens, and match the filename (without `.md`). the allowed statuses are `draft`, `reviewed`, and `needs-update`.
+the ID should be lowercase, use hyphens, and match the filename without `.md`. the allowed statuses are `draft`, `reviewed`, and `needs-update`.
 
-use empty arrays if there aren't any known tags, links, or sources. please don't make up source URLs. primary research, official docs, standards, and solid technical references are usually the best places to start.
+use empty arrays if there aren't any known tags, links, or sources. please don't make up source URLs. primary research, official docs, standards, and reliable technical references are usually good places to start.
 
 ## adding or editing topics
 
-a few rules to keep this folder useful:
+a few things to keep this folder useful:
 
 - keep each file focused on one topic.
 - explain terms before relying on them.
@@ -40,11 +42,11 @@ a few rules to keep this folder useful:
 - be extra careful with things that change quickly, like model details, security advice, and laws.
 - don't add passwords, private chats, personal records, or copyrighted source dumps here.
 
-## the index + scripts
+## the index and scripts
 
 `index.json` keeps track of the entries so the scripts can find them. if you add or rename a topic, its title, tags, related links, and file path need to match what's in the Markdown file.
 
-the validator checks the metadata, duplicate IDs, source URL format, indexed files, and related-topic links.
+the validator checks the metadata, duplicate IDs, source URL format, indexed files, and related topic links.
 
 from the repo root, run:
 
@@ -53,4 +55,4 @@ from the repo root, run:
     python scripts/search_knowledge.py --query "quantization memory" --limit 5
     python scripts/search_knowledge.py --query "privacy" --tag security
 
-no extra Python packages needed — the scripts use the standard library.
+no extra Python packages needed. the scripts use the standard library.
