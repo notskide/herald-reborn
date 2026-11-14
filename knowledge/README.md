@@ -1,12 +1,14 @@
-# Herald's Knowledge Dictionary
+# herald's knowledge dictionary
 
-This directory is the human-readable, version-controlled knowledge base for Herald Reborn. It currently contains **82 indexed topics** covering AI foundations, model training, retrieval and RAG, runtime architecture, applications, multimodal systems, evaluation, security, and responsible deployment.
+this folder is basically Herald's reference shelf.
 
-**Important:** a larger Dictionary is not a trained model. Entries provide retrievable information for a runtime to use; a language model is still needed to generate flexible natural-language responses. Entries marked `draft` have not completed deliberate source and claim review.
+it currently has **82 indexed topics** about AI basics, model training, retrieval and RAG, inference, agents, multimodal systems, evaluation, security, and responsible deployment.
 
-## Entry format
+quick note: a big folder of knowledge files is not a trained AI model. these entries give the retrieval system information it can find and pass along to a model. the model is still what generates the actual response. entries marked `draft` still need their sources and important claims checked.
 
-Each entry is a Markdown file with front matter:
+## what does an entry look like?
+
+each topic is a Markdown file with a little metadata block at the top. here's the general shape:
 
     ---
     id: example-topic
@@ -19,28 +21,36 @@ Each entry is a Markdown file with front matter:
     updated: 2026-10-14
     ---
 
-The ID must be stable, lowercase, hyphenated, and match the filename without `.md`. Allowed statuses are `draft`, `reviewed`, and `needs-update`. Use empty arrays where no known values exist. Never invent source URLs. Prefer primary research, official documentation, standards, and reputable technical references.
+the ID should be lowercase, use hyphens, and match the filename (without `.md`). the allowed statuses are `draft`, `reviewed`, and `needs-update`.
 
-## Writing and maintenance rules
+use empty arrays if there aren't any known tags, links, or sources. please don't make up source URLs. primary research, official docs, standards, and solid technical references are usually the best places to start.
 
-- Keep one entry focused on one concept; define terms before relying on them.
-- Write original explanations instead of copying long source passages.
-- Separate established claims from examples, recommendations, and unknowns.
-- Link related entries by stable IDs and keep every relationship valid.
-- New or substantially expanded entries start as `draft`. Mark `reviewed` only after checking key claims and source relevance.
-- Update dates when content is checked or changed.
-- Treat fast-changing model details, security guidance, and law as context-dependent.
-- Do not put secrets, private conversations, personal records, or copyrighted source dumps in this public repository.
+## adding or editing topics
 
-## Index and tools
+a few rules to keep this folder useful:
 
-The `index.json` file drives navigation and retrieval. Each record's title, tags, related links, and path must stay synchronized with its Markdown file. The validator checks metadata, duplicate IDs, source URL shape, indexed files, and relationships.
+- keep each file focused on one topic.
+- explain terms before relying on them.
+- write explanations in your own words instead of copying huge chunks from a source.
+- make it clear what's a confirmed fact, what's an example, and what's a recommendation.
+- use the IDs of related entries, not their filenames or display titles.
+- new or heavily changed entries should start as `draft`.
+- only mark something `reviewed` after checking the important claims and sources.
+- update the date when you actually check or change an entry.
+- be extra careful with things that change quickly, like model details, security advice, and laws.
+- don't add passwords, private chats, personal records, or copyrighted source dumps here.
 
-Run from the repository root:
+## the index + scripts
+
+`index.json` keeps track of the entries so the scripts can find them. if you add or rename a topic, its title, tags, related links, and file path need to match what's in the Markdown file.
+
+the validator checks the metadata, duplicate IDs, source URL format, indexed files, and related-topic links.
+
+from the repo root, run:
 
     python scripts/validate_knowledge.py
     python scripts/search_knowledge.py --query "How does retrieval-augmented generation work?"
     python scripts/search_knowledge.py --query "quantization memory" --limit 5
     python scripts/search_knowledge.py --query "privacy" --tag security
 
-The tools use Python's standard library and need no extra packages.
+no extra Python packages needed — the scripts use the standard library.
